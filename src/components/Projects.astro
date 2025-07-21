@@ -7,6 +7,8 @@ import Bootstrap from "./icons/Bootstrap.astro"
 import HTML from "./icons/html5.astro"
 import AstroDark from "./icons/Astro_dark.astro"
 import LinkButton from "./LinkButton.astro"
+import Shopify from "./icons/shopify.astro"
+import Gmail from "./icons/Gmail.astro"
 
 const TAGS = {
   NEXT: {
@@ -34,6 +36,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: AstroDark,
   },
+    SHOPIFY: {
+    name: "Shopify",
+    class: "bg-[#003159] text-white",
+    icon: Shopify,
+  },
+    GMAIL: {
+    name: "Correo Empresarial",
+    class: "bg-[#003159] text-white",
+    icon: Gmail,
+  },
 }
 const PROJECTS = [
   {
@@ -42,15 +54,15 @@ const PROJECTS = [
       "Página web de presentación de Veterinaria Local en la provincia de Talagante para ofrecer sus servicios de atención primaria a domicilio.",
     link: "https://veterinariacacri.cl",
     image: "/projects/cacri.png",
-    tags: [TAGS.BOOTSTRAP, TAGS.HTML],
+    tags: [TAGS.BOOTSTRAP, TAGS.HTML, TAGS.GMAIL],
   },
   {
     title: "MadTech",
     description:
-      "Página web en construcción, la cual cuenta con dominio propio y su correo empresarial configurado",
+      "E-Commerce con Shopify, con correo empresarial configurado",
     link: "https://madtech.cl",
     image: "/projects/madtech.png",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+    tags: [TAGS.SHOPIFY, TAGS.GMAIL],
   },
 ]
 ---
@@ -89,7 +101,7 @@ const PROJECTS = [
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
-              Preview
+              Ir
             </LinkButton>
           )}
         </footer>
