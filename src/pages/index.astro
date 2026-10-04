@@ -13,39 +13,38 @@ import TitleSection from "@/components/TitleSection.astro"
 ---
 
 <Layout
-  title="Porfolio de Matías Santis Urzúa - Desarrollador RPA"
-  description="Contrata a Matías Santis Urzúa para automatizar tus procesos empresariales. Desarrollador RPA con experiencia en UiPath, especializado en optimizar la eficiencia operativa."
+  title="Matías Santis Urzúa | Automation Engineer"
+  description="Portfolio de Matías Santis Urzúa, Automation Engineer con más de 6 años de experiencia en automatización empresarial, UiPath, Python, APIs, integraciones e infraestructura."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+      <Hero />
     </SectionContainer>
+
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
+      <SectionContainer id="experiencia">
+        <TitleSection>
+          <Briefcase class="size-8" />
+          Experiencia
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <TitleSection>
-        <CodeIcon class="size-7" />
-        Proyectos Adicionales 
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="proyectos">
+        <TitleSection>
+          <CodeIcon class="size-7" />
+          Proyectos
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
+      <SectionContainer id="sobre-mi">
+        <TitleSection>
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
