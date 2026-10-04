@@ -1,116 +1,147 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
-import Bootstrap from "./icons/Bootstrap.astro"
+import Code from "./icons/Code.astro"
 import HTML from "./icons/html5.astro"
 import AstroDark from "./icons/Astro_dark.astro"
-import LinkButton from "./LinkButton.astro"
-import Shopify from "./icons/Shopify.astro"
 import Gmail from "./icons/Gmail.astro"
+import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap CSS",
-    class: "bg-[#003159] text-white",
-    icon: Bootstrap,
-  },
-  HTML: {
-    name: "HTML",
-    class: "bg-[#003159] text-white",
-    icon: HTML,
-  },
   ASTRO: {
     name: "Astro",
     class: "bg-[#003159] text-white",
     icon: AstroDark,
   },
-    SHOPIFY: {
-    name: "Shopify",
+  HTML: {
+    name: "Web",
     class: "bg-[#003159] text-white",
-    icon: Shopify,
+    icon: HTML,
   },
-    GMAIL: {
-    name: "Correo Empresarial",
+  EMAIL: {
+    name: "Correo corporativo",
     class: "bg-[#003159] text-white",
     icon: Gmail,
   },
+  SEO: {
+    name: "SEO",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
+  CICD: {
+    name: "CI/CD",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
+  FASTAPI: {
+    name: "FastAPI",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
+  DOTNET: {
+    name: "C# / .NET",
+    class: "bg-[#003159] text-white",
+    icon: Code,
+  },
 }
+
 const PROJECTS = [
   {
-    title: "Veterinaria Cacri",
+    title: "Veterinaria Cacrivet",
     description:
-      "Página web de presentación de Veterinaria Local en la provincia de Talagante para ofrecer sus servicios de atención primaria a domicilio.",
+      "Proyecto web para una veterinaria a domicilio, trabajado con foco en presencia digital y captación local. Además del desarrollo y evolución del sitio, he participado en SEO técnico, contenedorización, CI/CD con GitHub Actions y GHCR, y despliegue en VPS. También configuré servicios asociados como dominio y correo corporativo.",
     link: "https://veterinariacacri.cl",
     image: "/projects/cacri.png",
-    tags: [TAGS.BOOTSTRAP, TAGS.HTML, TAGS.GMAIL],
+    tags: [TAGS.ASTRO, TAGS.SEO, TAGS.DOCKER, TAGS.EMAIL],
   },
   {
     title: "MadTech",
     description:
-      "E-Commerce con Shopify, con correo empresarial configurado",
+      "Evolución de la presencia digital de un servicio técnico, migrando desde Shopify hacia un sitio Astro orientado a servicios, SEO y generación de consultas. El proyecto incluye Docker, publicación de imágenes en GHCR, despliegue en VPS/Dokploy y flujos de CI/CD. También he trabajado en dominio y correo corporativo.",
     link: "https://madtech.cl",
     image: "/projects/madtech.png",
-    tags: [TAGS.SHOPIFY, TAGS.GMAIL],
+    tags: [TAGS.ASTRO, TAGS.SEO, TAGS.DOCKER, TAGS.EMAIL],
+  },
+  {
+    title: "Monitor y orquestador de automatización",
+    description:
+      "Plataforma desarrollada en Python/FastAPI para monitoreo proactivo de automatizaciones, máquinas y procesos, integrada con UiPath Orchestrator. La solución ha evolucionado para incorporar orquestación y supervisión de workers, con foco en observabilidad, continuidad operativa y reducción de revisiones manuales.",
+    link: null,
+    image: null,
+    tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.DOTNET, TAGS.CICD],
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Sitio web" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center justify-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            {
+              image ? (
+                <img
+                  alt={`Vista previa de ${title}`}
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  loading="lazy"
+                  src={image}
+                />
+              ) : (
+                <div class="flex h-56 w-full flex-col items-center justify-center gap-3 bg-gray-100 text-gray-600 dark:bg-gray-900 dark:text-gray-300">
+                  <Code class="size-12" />
+                  <span class="text-sm font-medium">Plataforma de automatización</span>
+                </div>
+              )
+            }
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-wrap mb-2 gap-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Ir
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+
+            {
+              link && (
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Ver sitio
+                  </LinkButton>
+                </footer>
+              )
+            }
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
