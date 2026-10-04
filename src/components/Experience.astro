@@ -1,44 +1,42 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+
 const EXPERIENCE = [
-    {
-    date: "Mayo 2025 - Actualmente...",
-    title: "Automation Controller",
+  {
+    date: "Mayo 2025 - Presente",
+    title: "Automation Controller - RPA / Intelligent Automation",
     company: "Scotiabank",
     description:
-      "Desarrollo de automatizaciones orientadas al monitoreo proactivo de la infraestructura RPA, asegurando la disponibilidad y el rendimiento óptimo de los robots. Implementación de soluciones para optimizar el uso de licencias y recursos, identificando oportunidades de mejora y eficiencia operativa. Apoyo técnico al equipo en la evaluación y definición de las mejores alternativas tecnológicas, contribuyendo a la toma de decisiones estratégicas para maximizar el valor de las automatizaciones en el banco.",
-
+      "Actualmente lidero técnicamente la evolución y continuidad de una plataforma UiPath de alta escala. Participo en code reviews, definición de estándares y decisiones técnicas; además he coordinado migraciones, optimizado el uso de licencias y desarrollado herramientas con Python/FastAPI y APIs para monitoreo e integración. También impulso servicios reutilizables y el gobierno técnico de iniciativas de Citizen Development.",
   },
   {
     date: "Noviembre 2023 - Mayo 2025",
-    title: "Desarrollador RPA",
+    title: "Desarrollador RPA UiPath",
     company: "Kpaz - Scotiabank",
     description:
-      "Monitoreo proactivo de RPAs, análisis de datos y mantenimiento para asegurar la continuidad y efectividad operativa de los robots. Resolución ágil de incidentes, Orquestación de robots a producción y ambientación de máquinas. Enfocado en la eficiencia para asegurar los menores tiempos en las tareas automatizadas del banco. ",
-
+      "Trabajé en continuidad y soporte de automatizaciones productivas, combinando monitoreo proactivo, análisis de datos y resolución de incidentes. También participé en despliegues a producción, ambientación de máquinas y mejoras controladas sobre procesos críticos, con foco en estabilidad y tiempos de respuesta.",
   },
   {
     date: "Agosto 2023 - Noviembre 2023",
-    title: "Desarrollador RPA",
+    title: "Desarrollador RPA UiPath",
     company: "Axity - Sura",
     description:
-      "Diseño, programación e implementación de procesos RPA para sistemas y aplicaciones web internas de Sura, colaboración directa con usuarios para identificar  y solucionar problemas mediante automatización. Mejora continua aplicada en proyectos de RPA asignados.",
+      "Diseñé, desarrollé e implementé automatizaciones para sistemas y aplicaciones web internas, trabajando directamente con usuarios para entender necesidades operativas y convertirlas en soluciones mantenibles. Además realicé soporte y mejora continua sobre los procesos asignados.",
   },
   {
-    date: "2019 - Marzo 2023",
-    title: "Desarrollador RPA",
+    date: "Noviembre 2019 - Marzo 2023",
+    title: "Desarrollador RPA UiPath",
     company: "DHL Supply Chain",
     description:
-      "Programación e implementación de procesos RPA para sistemas internos enfocados en logística y operaciones. Enfocado principalmente en la disminución de la carga operativa en procesos fundamentales para el correcto funcionamiento, garantizando una mayor eficiencia y productividad.",
+      "Desarrollé y mantuve automatizaciones para operaciones logísticas y sistemas internos, reduciendo trabajo manual en procesos relevantes para la operación. Esta etapa fue mi base en RPA y me permitió trabajar de forma cercana con procesos productivos, soporte y mejora continua.",
   },
-
 ]
 ---
 
 <ol class="relative mt-16">
   {
     EXPERIENCE.map((experience) => (
-      <li class="">
+      <li>
         <ExperienceItem {...experience} />
       </li>
     ))
